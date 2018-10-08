@@ -32,7 +32,7 @@ onSelect(contact: Contact): void {
   this.selectedContact = contact;
  
   document.getElementById("div1").style.display='none';
-  document.getElementById("div2").style.visibility="visible";
+  document.getElementById("div2").style.display="block";
 }
 //this function is used to render the list of contacts
 getContacts(): void {
@@ -44,6 +44,7 @@ getContacts(): void {
 delete(contact: Contact): void {
   this.contacts = this.contacts.filter(h => h !== contact);
   this.contactService.deleteHero(contact).subscribe();
+
 }
 //this is a reactive form builder which gets the values of the form
 private createForm() {
@@ -77,7 +78,7 @@ onSubmit() {
  showForm(){
   
        document.getElementById("div1").style.display='block';
-       document.getElementById("div2").style.visibility='hidden'
+       document.getElementById("div2").style.display='none'
        
        
      }
