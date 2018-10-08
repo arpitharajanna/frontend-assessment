@@ -1,5 +1,107 @@
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
+<h1 class="page-header">Welcome to {{ title }}!</h1>
+  <div class="page-container">
+
+
+
+<div class="heading-container">
+  <h4>Contact List</h4>
+  <a (click)="showForm();" class="create-button"><i class="fa fa-plus"> Create Contact</i></a>
 </div>
+
+<div style="text-align: center;">
+  
+  
+
+   <div class="container-table">
+     <div class="row">
+       <div class="col-md-6">
+         <div class="contacts-container">
+           <div class="contact-heading">
+           <h4>Contacts </h4>
+           </div>
+           
+           <table class="contacts-table">
+             <tr>
+               <td>Name</td>
+               <td>Email</td>
+               <td>Phone No</td>
+               <td>Action</td>
+             </tr>
+             <tr *ngFor="let contact of contacts" (click)="onSelect(contact)">
+              <td >
+                <!-- <i class="fa fa-user-circle-o" style="font-size:24px"></i> -->
+                <span >{{contact.name}}</span></td>
+                <td>{{contact.email}}</td>
+                <td>{{contact.phone}}</td>
+                <td (click)="delete(contact)"><i class="fa fa-trash"></i></td>
+
+             </tr>
+           </table>
+
+
+         </div>
+       </div>
+
+       <div class=col-md-6>
+          <div  id="div1" class="form-container" style="display:none;">
+              <h4 class="contact-heading">Fill in the Contact Details</h4>
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate class="form-box" >
+           
+            <div class="form-group">
+              <label for="name" style="float: left;">Name</label>
+              <input formControlName="name" type="text" class="form-control" id="name">  
+            </div>
+            
+            <div class="form-group">
+              <label for="salary" style="float: left;">Email</label>
+              <input formControlName="email" type="text" class="form-control" id="email">
+            </div>
+      
+            <div class="form-group">
+                <label for="phone" style="float: left;">Phone No</label>
+                <input formControlName="phone" type="text" class="form-control" id="phone">
+              </div>
+            <button type="submit" [disabled]="loader || contactForm.invalid" class="btn btn-primary" >{{loader?'Adding':'Add'}}</button>
+          </form> 
+          </div>
+
+        
+        <div id="div2">
+          <!-- <div *ngIf="selectedContact;"> 
+            <ng-template #condition1>Please click oen of the contact to view the details</ng-template>
+            
+            <div class="contact-details">
+              <h1 class="selected-contact-header"> {{selectedContact.name}} Profile</h1>
+              <div class="contact-details-container" >
+              <div class="contact-image">
+                <img src="/assets/download.png">
+              </div>
+            
+            <div class="contact-content">
+              <h2>Name: {{selectedContact.name}}</h2>
+              <table style="width:100%;border-collapse:collapse;">
+                <tr style="border:1px solid black; ">
+                  <td style="border:1px solid black;"><span style="padding:20px; color:blue;"><i class="fa fa-envelope" style="font-size: 20px;"></i></span>{{selectedContact.email}}</td>
+                  <td style="border:1px solid black;"><span style="padding:20px; color:blue;"><i class="fa fa-phone" style="font-size: 20px;"></i></span>{{selectedContact.phone}}</td>
+                </tr>
+              </table> 
+               <h4>Email: {{selectedContact.email}}</h4>
+              <h4>Phone no: {{selectedContact.phone}}</h4> 
+            </div>
+            </div>
+          </div>
+            
+
+       </div> -->
+       </div>
+       </div>
+       
+     </div>
+   </div>
+    
+
+  
+
+</div>
+
+<router-outlet></router-outlet>

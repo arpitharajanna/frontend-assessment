@@ -1,0 +1,84 @@
+.page-header{
+    text-align: center;
+}
+.heading-container{
+    display: flex;
+    justify-content: space-between;
+    padding:20px;
+    background-color: lightblue;
+}
+.create-button{
+    cursor:pointer;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.fa-trash{
+    color:red;
+    font-size:24px;
+    text-align: center;
+    display:flex;
+    justify-content: center;   
+}
+.fa>.fa-plus{
+    font-size: 22px;
+
+}
+.container-table{
+    padding:20px 20px;  
+}
+.contact-box{
+    border:1px solid black;
+    margin:20px;
+}
+.contact-icon{
+    padding:10px 0;
+}
+.contacts-container{
+    border:1px solid black;
+}
+.contact-heading{
+    padding:10px;
+    background-color: purple;
+    color:white;
+    
+}
+.contacts-table{
+    width:100%;
+}
+.contacts-table tr td{
+border-bottom:1px solid black;
+padding:10px;
+cursor: pointer;
+}
+
+.contact-heading h4{
+    color: white;
+}
+.page-container{
+    border:1px solid black;
+    margin:0 auto;
+    width:95%;
+}
+
+/* form */
+.form-container{
+    border:1px solid black;
+}
+.form-box{
+    padding:30px;
+}
+
+/* selected contact */
+.selected-contact-header{
+    background-color: purple; 
+    color:white; 
+    margin:0;  
+}
+.contact-details-container{
+    background-color: lightgray;
+     padding:10px 0;
+}
+
+.contact-image{
+    padding:20px 0; 
+}
