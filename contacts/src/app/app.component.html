@@ -23,10 +23,10 @@
            
            <table class="contacts-table">
              <tr>
-               <td>Name</td>
-               <td>Email</td>
-               <td>Phone No</td>
-               <td>Action</td>
+               <td class="table-heading">Name</td>
+               <td class="table-heading">Email</td>
+               <td class="table-heading">Phone No</td>
+               <td class="table-heading">Action</td>
              </tr>
              <tr *ngFor="let contact of contacts" (click)="onSelect(contact)">
               <td >
@@ -73,7 +73,9 @@
             <!-- <ng-template #condition1>Please click oen of the contact to view the details</ng-template> -->
             
             <div class="contact-details">
-              <h1 class="selected-contact-header"> {{selectedContact.name}} Profile</h1>
+              <div class="selected-contact-header">
+              <h4 > {{selectedContact.name}} Profile</h4>
+              </div>
               <div class="contact-details-container" >
               <div class="contact-image">
                 <img src="/assets/download.png">

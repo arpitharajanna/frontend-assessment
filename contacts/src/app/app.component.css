@@ -73,6 +73,7 @@ cursor: pointer;
     background-color: purple; 
     color:white; 
     margin:0;  
+    padding:10px;
 }
 .contact-details-container{
     background-color: lightgray;
@@ -81,4 +82,8 @@ cursor: pointer;
 
 .contact-image{
     padding:20px 0; 
+}
+
+.table-heading{
+    font-weight: bold;
 }
