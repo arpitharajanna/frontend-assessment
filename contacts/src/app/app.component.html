@@ -14,6 +14,7 @@
 
    <div class="container-table">
      <div class="row">
+       <!-- this will display the table with list of contacts -->
        <div class="col-md-6">
          <div class="contacts-container">
            <div class="contact-heading">
@@ -41,7 +42,7 @@
 
          </div>
        </div>
-
+<!-- this will create a form on click of create button -->
        <div class=col-md-6>
           <div  id="div1" class="form-container" style="display:none;">
               <h4 class="contact-heading">Fill in the Contact Details</h4>
@@ -66,9 +67,10 @@
           </div>
 
         
-        <div id="div2">
-          <!-- <div *ngIf="selectedContact;"> 
-            <ng-template #condition1>Please click oen of the contact to view the details</ng-template>
+        
+          <div *ngIf="selectedContact;"> 
+              <div id="div2" style="visibility: visible;">
+            <!-- <ng-template #condition1>Please click oen of the contact to view the details</ng-template> -->
             
             <div class="contact-details">
               <h1 class="selected-contact-header"> {{selectedContact.name}} Profile</h1>
@@ -79,12 +81,12 @@
             
             <div class="contact-content">
               <h2>Name: {{selectedContact.name}}</h2>
-              <table style="width:100%;border-collapse:collapse;">
+              <!-- <table style="width:100%;border-collapse:collapse;">
                 <tr style="border:1px solid black; ">
                   <td style="border:1px solid black;"><span style="padding:20px; color:blue;"><i class="fa fa-envelope" style="font-size: 20px;"></i></span>{{selectedContact.email}}</td>
                   <td style="border:1px solid black;"><span style="padding:20px; color:blue;"><i class="fa fa-phone" style="font-size: 20px;"></i></span>{{selectedContact.phone}}</td>
                 </tr>
-              </table> 
+              </table>  -->
                <h4>Email: {{selectedContact.email}}</h4>
               <h4>Phone no: {{selectedContact.phone}}</h4> 
             </div>
@@ -92,7 +94,7 @@
           </div>
             
 
-       </div> -->
+       </div>
        </div>
        </div>
        

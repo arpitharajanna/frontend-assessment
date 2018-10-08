@@ -30,8 +30,9 @@ export class AppComponent {
 // this is used to display the seletecd contact
 onSelect(contact: Contact): void {
   this.selectedContact = contact;
-  if(document.getElementById("div1").style.display='block')
+ 
   document.getElementById("div1").style.display='none';
+  document.getElementById("div2").style.visibility="visible";
 }
 //this function is used to render the list of contacts
 getContacts(): void {
@@ -74,14 +75,14 @@ onSubmit() {
 }
 
  showForm(){
-   if(document.getElementById("div1"))
-     if(document.getElementById("div1").style.display='none'){
+   if(document.getElementById("div2").style.visibility='visible')
        document.getElementById("div1").style.display='block';
+       document.getElementById("div2").style.visibility='hidden'
        
        
      }
      
-   }
+   
    
  
 
