@@ -75,7 +75,7 @@ onSubmit() {
 }
 
  showForm(){
-   if(document.getElementById("div2").style.visibility='visible')
+  
        document.getElementById("div1").style.display='block';
        document.getElementById("div2").style.visibility='hidden'
        
