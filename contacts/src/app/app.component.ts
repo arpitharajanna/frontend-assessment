@@ -27,23 +27,24 @@ export class AppComponent {
   this.getContacts();
   this.createForm();
 }
-
+// this is used to display the seletecd contact
 onSelect(contact: Contact): void {
   this.selectedContact = contact;
   if(document.getElementById("div1").style.display='block')
   document.getElementById("div1").style.display='none';
 }
+//this function is used to render the list of contacts
 getContacts(): void {
   this.contactService.getContacts()
         .subscribe(contacts => this.contacts = contacts);
          
 }
-
+//this funtion is used to delete the selected contact
 delete(contact: Contact): void {
   this.contacts = this.contacts.filter(h => h !== contact);
   this.contactService.deleteHero(contact).subscribe();
 }
-
+//this is a reactive form builder which gets the values of the form
 private createForm() {
   this.contactForm = this.fb.group({
    
@@ -53,6 +54,7 @@ private createForm() {
   });
 }
 
+//on submit of the form this will push the new contact to the contacts list and displays in the table
 onSubmit() {
    const contact= this.contactForm.value;
    
@@ -70,6 +72,7 @@ onSubmit() {
       console.log(this.contacts)
     
 }
+
  showForm(){
    if(document.getElementById("div1"))
      if(document.getElementById("div1").style.display='none'){

@@ -24,10 +24,10 @@ export class ContactService {
   }
   create(contact:Contact): Observable<Contact> {
     return this.http.post<Contact>(this.contactsUrl, contact)
-    // .pipe(
-    //   tap((param: Contact) => this.log('added contact w/ id=${contact.id}')),
-    //   catchError(this.handleError<Contact>('create'))
-    // );
+    .pipe(
+      tap((param: Contact) => this.log('added contact w/ id=${contact.id}')),
+      catchError(this.handleError<Contact>('create'))
+    );
   }
 
   deleteHero (contact: Contact | number): Observable<Contact> {
