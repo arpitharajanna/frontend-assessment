@@ -61,7 +61,7 @@ export class ContactService {
     };
   }
   
-  /** Log a HeroService message with the MessageService */
+  /** Log a ContactService message with the MessageService */
   private log(message: string) {
     this.messageService.add(`ContactService: ${message}`);
   }
